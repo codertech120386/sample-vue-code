@@ -1,0 +1,111 @@
+@use 'styles';
+
+.asset-video {
+    background-color: styles.$almost-black;
+    & .asset-video {
+        &__banner {
+            &--image {
+                width: 100%;
+                // fixme later
+                height: 202px;
+            }
+            &--play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                width: 58px;
+                height: 58px;
+                background-color: rgba(13, 17, 24, 0.8);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &--play-button-icon {
+                font-size: 22px;
+            }
+            &--detail {
+                width: 100%;
+            }
+            &--release-year {
+                font-size: 12px;
+                font-weight: bold;
+                margin: 16px 0 0 0;
+                text-transform: capitalize;
+            }
+            &--heading {
+                font-size: 20px;
+                font-weight: bold;
+                margin: 16px 0;
+            }
+            &--sub-heading {
+                font-size: 12px;
+                margin: 16px 0;
+            }
+            &--info-bar {
+                margin-bottom: 16px;
+            }
+            &--play-state {
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            &--description {
+                font-size: 12px;
+                text-align: justify;
+                margin-bottom: 32px;
+            }
+        }
+        &__detail {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            &--cast-container {
+                width: 100%;
+            }
+            &--summary-container {
+                margin-bottom: 32px;
+            }
+            &--summary-heading {
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 1.17;
+                color: styles.$steel;
+                margin-bottom: 4px;
+            }
+            &--summary-text {
+                font-size: 12px;
+            }
+        }
+        &__tab-list {
+            margin-bottom: 24px;
+        }
+        &__tab-card {
+            &--container {
+                min-height: 300px;
+                padding-left: 4%;
+            }
+        }
+        &__playlist {
+            margin-bottom: 32px;
+            &--wrapper {
+                overflow: hidden;
+            }
+        }
+        &__watch-now {
+            &--floating {
+                position: sticky;
+                bottom: 0;
+                width: 100%;
+                box-shadow: 0 -2px 12px 0 rgba(styles.$black, 21%);
+                background-color: styles.$dark;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+            &--btn {
+                width: 100%;
+            }
+        }
+    }
+}

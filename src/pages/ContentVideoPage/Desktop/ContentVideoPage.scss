@@ -1,0 +1,56 @@
+@use 'styles';
+
+.asset-video {
+    background-color: styles.$almost-black;
+    & .asset-video {
+        &__banner {
+            &--container {
+                height: 696px;
+                position: relative;
+            }
+            &--action-bar {
+                margin-top: 24px;
+            }
+            &--dolby-icon {
+                position: absolute;
+                top: 40px;
+                right: 48px;
+                font-size: 40px;
+            }
+            &--image {
+                // inside lazyimage
+                .lazyimage__placeholder {
+                    padding: 200px 35%;
+                    align-items: flex-start;
+                }
+            }
+            &--gradient {
+                z-index: 2;
+                position: absolute;
+                left: 0;
+                right: 0;
+                overflow: hidden;
+                height: 100%;
+                bottom: 0;
+                background-image: linear-gradient(
+                    to bottom,
+                    styles.$transparent 29%,
+                    styles.$dark
+                );
+            }
+            &--detail {
+                width: 100%;
+                z-index: 2;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            &--heading {
+                font-size: 36px;
+                font-weight: 900;
+                text-shadow: 0 2px 4px rgba(styles.$black, 30%);
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
